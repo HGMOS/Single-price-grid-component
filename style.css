@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+html {
+	font-size: 16px;
+	font-family: 'karla', sans-serif;
+}
+:root {
+
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Light-Gray);
+  padding: 100px 30px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0px 0px 14px 1px;
+  overflow: hidden;
+
+}
+
+.item {
+  padding: 30px;
+ 
+}
+.item1 {
+  background-color: white;
+  
+}
+.item1 h2 {
+  color: var(--Cyan);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+
+}
+
+.item1 h3 {
+  color: var(--Bright-Yellow);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+.item1 p {
+  color: var(--Grayish-Blue);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.item2 {
+  background-color: var(--Cyan);
+}
+.item2 h3 {
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.item2 p {
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.item2 p span {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.item2 a {
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+  background-color: var(--Bright-Yellow);
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-top: 30px;
+  font-weight: 700;
+  box-shadow: 0px 3px 10px 1px gray;
+  border-radius: 8px;
+
+}
+
+.item3 {
+  background-color: #4EBFB4;
+}
+.item3 h3 {
+  color: white;
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+.item3 p {
+  color: var(--Light-Gray);
+  line-height: 1.5rem;
+
+}
+
+@media only screen and (min-width: 768px) {
+	.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "item1 item1"
+      "item2 item3";
+  }
+  
+  .item1 { grid-area: item1; }
+  
+  .item2 { grid-area: item2; }
+  
+  .item3 { grid-area: item3; }
+  
+}
+
